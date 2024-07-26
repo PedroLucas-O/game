@@ -1,26 +1,29 @@
 // AULA ACOMPANHADA
 
-// alert('boas-vindas ao jogo do numero secreto');
-// let numeroSecreto = 5;
-// let chute = prompt('Escolha um numero entre 1 e 30')
-// if(chute == numeroSecreto){
-//     alert(`Isso aê, você acertou o numero secreto: ${numeroSecreto}`)
-// } else{
-//     alert('Que pena você errou, tente novamente')
-// }
+alert('boas-vindas ao jogo do numero secreto');
+let numeroSecreto = 5;
+let chute = prompt('Escolha um numero entre 1 e 30')
+let tentativa=1
 
-// TAREFA DE CASA 
+while (chute != numeroSecreto) {
 
-alert('Boas-Vindas ao Nosso Site!');
-let nome = "lua";
-let numeroDeVendas = 50;
-let saldoDisponivel = 1000;
-let idade = prompt('Digite sua idade:');
-
-if (idade >= 18) {
-alert('Pode tirar a habilitação!');
+     chute = prompt('Escolha um numero entre 1 e 30')
+    if(chute == numeroSecreto){
+    } else{
+    if(numeroSecreto > chute){
+        alert(`Numero Secreto é Maior que ${chute}`)
+    } else{
+        alert(`Numero Secreto é Menor que ${chute}`)
+   }
+   tentativa++
 }
 
-alert('Erro! Preencha todos os campos');
-let mensagemDeErro = "Erro! Preencha todos os campos!";
-alert(`${mensagemDeErro}`);
+}
+
+let palavraTentativa = tentativa>1?"tentativas":"tentativa";
+alert(`Isso aê Você Descobriu o Numero Secreto que é: ${numeroSecreto} com ${tentativa} ${palavraTentativa}`)
+
+
+
+
+
